@@ -108,6 +108,11 @@ table {
     color: rgb(229, 225, 230);
     font-size: 3rem;
     cursor: pointer;
+    transition: transform .5s ease;
+}
+.social-icon:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 30px 3px #e60073;
 }
 .social-container {
     color: rgb(229, 225, 230);
