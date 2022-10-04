@@ -1,0 +1,27 @@
+[
+    {
+        "img": "assets/crypto.png",
+        "txt": "Crypto Sniper",
+        "id": 1
+    },
+    {
+        "img": "assets/adhype.png",
+        "txt": "Adhype Visuals",
+        "id": 2
+    },
+    {
+        "img": "assets/translator.png",
+        "txt": "Translator App",
+        "id": 3
+    },
+    {
+        "img": "assets/asylum.png",
+        "txt": "Asylum Office Status Tracker",
+        "id": 4
+    },
+     {
+        "img": "assets/weather.png",
+        "txt": "Weather App",
+        "id": 5
+    }
+]

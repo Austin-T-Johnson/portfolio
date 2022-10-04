@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "img": "assets/react.png",
+        "txt": "I have built many applications using React and it has become my framework of choice.",
+        "name": "React"
+    },
+    {
+        "id": 2,
+        "img": "assets/javascript.png",
+        "txt": "As my programming language of choice, I have built every application using JavaScript.",
+        "name": "JavaScript"
+    },
+    {
+        "id": 3,
+        "img": "assets/vue.png",
+        "txt": "Eager to learn a new framework, Vue is becoming a new favorite of mine, I have now used it for multiple projects.",
+        "name": "Vue"
+    },
+    {
+        "id": 4,
+        "img": "assets/node.png",
+        "txt":"I know the ins and outs of the node as a framework and can create a node application from scratch quickly.",
+        "name": "Node.js"
+    },
+    {
+        "id": 5,
+        "img": "assets/sql-1.png",
+        "txt":"I have used SQL on many projects and use it as my database of choice.",
+        "name": "SQL"
+    },
+    {
+        "id": 6,
+        "img": "assets/html5.png",
+        "txt":"The backbone of any application, I have used HTML for years and mastered it.",
+        "name": "HTML5"
+    },
+    {
+        "id": 7,
+        "img": "assets/css.png",
+        "txt":"I know css and many of its other frameworks like the back of my hand.",
+        "name": "CSS"
+    },
+    {
+        "id": 8,
+        "img": "assets/digiocean.png",
+        "txt":"I use Digital Ocean to deploy all of my apps.",
+        "name": "Digital Ocean"
+    },
+    {
+        "id": 9,
+        "img": "assets/photoshop.png",
+        "txt":"I have used Photoshop for 10+ years and have mastered the program.",
+        "name": "Photoshop"
+    },
+    {
+        "id": 10,
+        "img": "assets/illustrator.png",
+        "txt":"Along with Photoshop I have used Illustrator for 10+ years and created branding and logos for many companies.",
+        "name": "Illustrator"
+    },
+    {
+        "id": 11,
+        "img": "assets/after_effects.png",
+        "txt":"I have extensive experience using After Effects, and have created motion graphics for major bands and music artists.",
+        "name": "After Effects"
+    },
+    {
+        "id": 12,
+        "img": "assets/cinema.png",
+        "txt":"I have some 3d modeling experience and can create some awesome 3d renderings.",
+        "name": "Cinema 4d"
+    }
+]
