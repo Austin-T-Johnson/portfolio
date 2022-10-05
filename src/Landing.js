@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import resume from '../src/pdf/resume.pdf';
+import toast, { Toaster } from 'react-hot-toast';
 
 
 
@@ -22,15 +23,21 @@ const Landing = () => {
         e.preventDefault();
         let post = {name: name, email: email, message: message};
         try {
-            await axios.post("/api/contact", post);
-        }
-       catch (error){
+            if(name == "" || email == "" || message == "") {
+                toast.error("Please fill out all fields")
+            } else {
+               await axios.post("/api/contact", post);
+            toast.success("Message Sent!") 
+            setName('')
+            setEmail('')
+            setMessage('')
+            }
+            
+        } catch (error){
         console.log(error)
        }
        
-     setName('')
-     setEmail('')
-     setMessage('')
+   
     }
     return (
         <>
@@ -129,6 +136,7 @@ const Landing = () => {
                 </form>
                 <div className="btn-content">
                     <button onClick={onSubmit}>Send It!</button>
+                    <Toaster />
                 </div>
             </section>
         </>
