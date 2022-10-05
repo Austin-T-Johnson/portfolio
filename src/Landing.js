@@ -1,12 +1,37 @@
-import React from 'react'
-import projects from './JSON/projects.json'
-import skills from './JSON/skills.json'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSquareGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
+import React, { useState } from 'react';
+import axios from 'axios';
+import projects from './JSON/projects.json';
+import skills from './JSON/skills.json';
+import aj from './assets/aj-circle.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquareGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import resume from '../src/pdf/resume.pdf';
 
+
+
 const Landing = () => {
+
+   const [name, setName] = useState('')
+   const [email, setEmail] = useState('')
+   const [message, setMessage] = useState('')
+    
+ 
+
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        let post = {name: name, email: email, message: message};
+        try {
+            await axios.post("/api/contact", post);
+        }
+       catch (error){
+        console.log(error)
+       }
+       
+     setName('')
+     setEmail('')
+     setMessage('')
+    }
     return (
         <>
             <div className="header-container">
@@ -18,29 +43,37 @@ const Landing = () => {
                 <div className="socials">
                     
                     <div className="social-container">
-                      <a href="https://github.com/Austin-T-Johnson" target="_blank"><FontAwesomeIcon className="social-icon" icon={faSquareGithub} /></a>
+                      <a href="https://github.com/Austin-T-Johnson" target="_blank" rel="noreferrer"><FontAwesomeIcon className="social-icon" icon={faSquareGithub} /></a>
                         <span>GitHub</span>
                     </div>
                     <div className="social-container">
-                        <a href="https://www.linkedin.com/in/austin-t-johnson/" target="_blank"><FontAwesomeIcon className="social-icon" icon={faLinkedin} /></a>
+                        <a href="https://www.linkedin.com/in/austin-t-johnson/" target="_blank" rel="noreferrer"><FontAwesomeIcon className="social-icon" icon={faLinkedin} /></a>
                          <span>LinkedIn</span>
                     </div>
                     <div className="social-container">
-                    <a href= {resume} target="_blank"><FontAwesomeIcon className="social-icon" icon={faFilePdf} /></a>
+                    <a href= {resume} target="_blank" rel="noreferrer"><FontAwesomeIcon className="social-icon" icon={faFilePdf} /></a>
                     <span>Resume</span>
                     </div>
                 </div>
             </div>
+            <div className="separator-left"></div>
+                <div className="separator-angle"></div>
+                <div className="separator-right"></div>
+                
+            
+
             <div className="about-section-container">
                 <div className="about-text">
-                    <h1>About Me</h1>
+                  <h1 className="about-h1">
+                    <span>About Me</span>
+                    </h1>
                     <br></br><br></br>
                     <span>
                         I grew up loving music and art. I have a passion for design, which drew me to web development. Creating with code and laying out a good looking page is what I love to do and strive for in every page I create. I have worked on projects ranging from an <strong>Asylum Status Tracker</strong> for a non-profit, to <strong>Profession Business Sites</strong> for various companies, even a few just for fun projects such as a <strong>Crypto Tracker, </strong><strong>Translator App, </strong> and <strong>Weather App</strong>
                     </span>
                 </div>
                 <div className="about-img">
-                    {/* <img src={aj} className="aj"></img> */}
+                    <img src={aj} className="aj" alt="austin johnson"></img>
                 </div>
             </div>
             <h1 className="my-portfolio">My Portfolio</h1>
@@ -81,21 +114,21 @@ const Landing = () => {
                 <form className="contact-form">
                     <div className="input-div">
                         <label className="label">Name</label>
-                        <input className="input-input" type="text" />
+                        <input value={name}  onChange={(e) => setName(e.target.value)} className="input-input" type="text" />
                     </div>
 
                     <div className="input-div">
                         <label className="label">Email</label>
-                        <input className="input-input" type="text" />
+                        <input value={email} onChange={(e) => setEmail(e.target.value)} className="input-input" type="email" />
                     </div>
 
                     <div className="input-div">
                         <label className="label">Message</label>
-                        <input className="input-input" type="text" />
+                        <input value={message} onChange={(e) => setMessage(e.target.value)} className="input-input" type="text" />
                     </div>
                 </form>
                 <div className="btn-content">
-                    <button>Send It!</button>
+                    <button onClick={onSubmit}>Send It!</button>
                 </div>
             </section>
         </>

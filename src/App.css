@@ -88,6 +88,8 @@ table {
     font-family: 'Venus Rising';
     font-size: 3rem;
     color: rgb(229, 225, 230);
+    transform: scale(0.94);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
 
 .header-text-container h2 {
@@ -95,6 +97,7 @@ table {
     font-size: 2rem;
     color: rgb(229, 225, 230);
     animation: glow 1s ease-in-out infinite alternate;
+  
 }
 .socials {
     gap: 50px;
@@ -121,7 +124,35 @@ table {
     flex-direction: column;
     gap: 10px;
 }
+.separator-left {
+    display: flex;
+    gap: 4px;
+    height: 4px;
+    left: 10.3%;
+    position: absolute;
+    width: 40%;
+    background-color: rgb(229, 225, 230);
+}
+.separator-angle {
+    background-color: rgb(229, 225, 230);
+    width: 1%;
+    height: 4px;
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 50%;
+    bottom: 38.7%;
+}
 
+.separator-right {
+    display: flex;
+    gap: 4px;
+    height: 4px;
+    right: 9.2%;
+    bottom: 39.3%;
+    position: absolute;
+    width: 40%;
+    background-color: rgb(229, 225, 230);
+}
 .about-section-container {
     display: flex;
     justify-content: space-evenly;
@@ -130,12 +161,6 @@ table {
     height: 700px;
     color: white;
     padding-top: 100px;
-}
-
-.about-text h1 {
-    font-size: 4rem;
-    color: white;
-    animation: glow 1s ease-in-out infinite alternate;
 }
 
 .about-text {
@@ -148,6 +173,25 @@ table {
     color: rgb(229, 225, 230);
     line-height: 3.5rem;
 }
+
+.about-h1 {
+    transform: scale(1.94);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    font-size: 3rem;
+    color: white;
+    transform: translate(-50%, -50%);
+    font-family: 'Venus Rising';
+}
+
+.about-h1 span {
+    
+    opacity: 0;
+    filter: blur(4px);
+}
+
+.about-h1 span:nth-child(1) {
+    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
 
 strong {
     color: #73CDE5;
@@ -172,9 +216,8 @@ strong {
 }
 
 .my-portfolio {
-    font-family: 'JetBrains Mono';
-    font-size: 4rem;
-    animation: glow 1s ease-in-out infinite alternate;
+    font-family: 'Venus Rising';
+    font-size: 3rem;
     color: rgb(229, 225, 230);
     text-align: center;
     margin: 200px 0;
@@ -188,14 +231,13 @@ strong {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-
+    transition: transform .5s ease;
+    cursor: pointer;
+}
+.proj-container:hover {
+    transform: scale(1.1);
 }
 
-/* .proj-img {
-  
-    height: 500px;
-    width: 1000px;
-} */
 .proj-txt {
     position: relative;
     width: 40vh;
@@ -215,9 +257,8 @@ strong {
 }
 
 .skills-h1 {
-    font-family: 'JetBrains Mono';
-    font-size: 4rem;
-    animation: glow 1s ease-in-out infinite alternate;
+    font-family: 'Venus Rising';
+    font-size: 3rem;
     color: rgb(229, 225, 230);
     text-align: center;
     margin: 100px 0;
@@ -292,10 +333,9 @@ strong {
 
 .get-in-touch {
     color: rgb(229, 225, 230);
-    font-size: 4rem;
-    font-family: 'JetBrains Mono';
-    animation: glow 1s ease-in-out infinite alternate;
-}
+    font-size: 3rem;
+    font-family: 'Venus Rising';
+  }
 
 .form {
     display: flex;
@@ -449,3 +489,55 @@ button:after {
         text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
     }
 }
+/* @keyframes move {
+   from {
+    transform: translateX(100%);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+   }
+   to {
+    transform: translateX(-100%);
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+   }
+} */
+@keyframes fade-in {
+    100% {
+        opacity: 1;
+        filter: blur(0)
+    }
+}
+@keyframes scale {
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+@keyframes animate {
+    0%,
+    100% {
+      clip-path: polygon(
+        0% 45%,
+        16% 44%,
+        33% 50%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 52%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  
+    50% {
+      clip-path: polygon(
+        0% 60%,
+        15% 65%,
+        34% 66%,
+        51% 62%,
+        67% 50%,
+        84% 45%,
+        100% 46%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  }
