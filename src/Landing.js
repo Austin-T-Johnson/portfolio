@@ -36,9 +36,9 @@ const Landing = () => {
         } catch (error) {
             console.log(error)
         }
-
-
     }
+
+
     return (
         <>
             <div className="header-container">
@@ -63,6 +63,11 @@ const Landing = () => {
                     </div>
                 </div>
             </div>
+            <div className="launch">
+                <p>>></p>
+                <p className="init"> LAUNCH INITIATED</p>
+            </div>
+
             <div className="separator-left"></div>
             <div className="separator-angle"></div>
             <div className="separator-right"></div>
@@ -70,12 +75,12 @@ const Landing = () => {
 
 
             <div className="about-section-container">
-                <div className="about-text">
+                <div className="about-text-container">
                     <h1 className="about-h1">
                         <span>About Me</span>
                     </h1>
                     <br></br><br></br>
-                    <span>
+                    <span className="about-txt">
                         I grew up loving music and art. I have a passion for design, which drew me to web development. Creating with code and laying out a good looking page is what I love to do and strive for in every page I create. I have worked on projects ranging from an <strong>Asylum Status Tracker</strong> for a non-profit, to <strong>Profession Business Sites</strong> for various companies, even a few just for fun projects such as a <strong>Crypto Tracker, </strong><strong>Translator App, </strong> and <strong>Weather App</strong>
                     </span>
                 </div>
@@ -92,21 +97,21 @@ const Landing = () => {
             <div className="portfolio-section-container">
                 {projects.map((proj) => {
                     return (
-                        <div className="proj-container" key={proj.id}>
+                       <a href={proj.link} target="_blank" rel="noreferrer"><div className="proj-container" key={proj.id}>
                             <div className="proj-img"><img src={proj.img} alt="project images"></img></div>
                             <div className="proj-txt"><span>{proj.txt}</span></div>
-                        </div>
+                        </div></a> 
                     )
                 })}
             </div>
             <div className="repeater-wrapper"></div>
             <h1 className="skills-h1">Skills</h1>
             <div className="boot-container">
-               <p className="skills-dialog"> >> BOOT DIALOGUE: AVAILABLE SKILLS</p> 
-               <p className="skills-bracket">[=&nbsp;=&nbsp;=]</p>
+                <p className="skills-dialog"> >> BOOT DIALOGUE: AVAILABLE SKILLS</p>
+                <p className="skills-arrow">↓</p>
             </div>
-            
-            
+
+
             <div className="skills-container">
                 {skills.map((skill) => {
                     return (
@@ -147,7 +152,7 @@ const Landing = () => {
                     </div>
                 </form>
                 <div className="btn-content">
-                    <button onClick={onSubmit}>Send It!</button>
+                    <button onClick={onSubmit}>Submit</button>
                     <Toaster />
                 </div>
             </section>

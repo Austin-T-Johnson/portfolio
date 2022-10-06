@@ -2,17 +2,20 @@
     {
         "img": "assets/crypto.png",
         "txt": "Crypto Sniper",
-        "id": 1
+        "id": 1,
+        "link": "https://crypto-sniper.vercel.app/"
     },
     {
         "img": "assets/adhype.png",
         "txt": "Adhype Visuals",
-        "id": 2
+        "id": 2,
+        "link": "https://adhypevisuals.com/"
     },
     {
         "img": "assets/translator.png",
         "txt": "Translator App",
-        "id": 3
+        "id": 3,
+        "link": "https://translator.adhypevisuals.com/"
     },
     {
         "img": "assets/asylum.png",
