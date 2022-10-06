@@ -128,27 +128,58 @@ table {
     display: flex;
     gap: 4px;
     height: 4px;
-    left: 10.3%;
+    left: 9.65%;
+    bottom: 36.83%;
     position: absolute;
     width: 40%;
     background-color: rgb(229, 225, 230);
 }
 .separator-angle {
     background-color: rgb(229, 225, 230);
-    width: 1%;
+    width: 2%;
     height: 4px;
     transform: rotate(-45deg);
     position: absolute;
-    left: 50%;
-    bottom: 38.7%;
+    left: 49.3%;
+    bottom: 38.1%;
 }
 
 .separator-right {
     display: flex;
     gap: 4px;
     height: 4px;
-    right: 9.2%;
-    bottom: 39.3%;
+    right: 9.1%;
+    bottom: 39.4%;
+    position: absolute;
+    width: 40%;
+    background-color: rgb(229, 225, 230);
+}
+.separator-left-2 {
+    display: flex;
+    gap: 4px;
+    height: 4px;
+    left: 9.65%;
+    bottom: -46.8%;
+    position: absolute;
+    width: 40%;
+    background-color: rgb(229, 225, 230);
+}
+.separator-angle-2 {
+    background-color: rgb(229, 225, 230);
+    width: 2%;
+    height: 4px;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 49.3%;
+    bottom: -48.2%;
+}
+
+.separator-right-2 {
+    display: flex;
+    gap: 4px;
+    height: 4px;
+    right: 9.1%;
+    bottom: -49.4%;
     position: absolute;
     width: 40%;
     background-color: rgb(229, 225, 230);
@@ -201,6 +232,17 @@ strong {
 .aj {
     height: 600px;
     width: 600px;
+}
+
+.repeater-wrapper {
+    max-width: 1312px;
+    padding: 0px 64px;
+    height: 24px;
+    /* margin-right: auto;
+    margin-bottom: 64px;
+    margin-left: auto; */
+    margin: 64px auto;
+    background: url('../public/assets/repeater.svg')
 }
 
 .portfolio-section-container {
@@ -261,7 +303,31 @@ strong {
     font-size: 3rem;
     color: rgb(229, 225, 230);
     text-align: center;
-    margin: 100px 0;
+    margin: 90px 0;
+}
+.boot-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.skills-dialog {
+    font-family: 'JetBrains Mono';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    color:rgb(229, 225, 230);
+    text-align: center;
+    text-shadow: rgb(124, 127, 255)  1px 1px 6px;
+}
+.skills-bracket {
+    color:rgb(229, 225, 230);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    font-family: 'JetBrains Mono';
+    text-shadow: rgb(124, 127, 255)  1px 1px 6px;
 }
 
 .skills-container {

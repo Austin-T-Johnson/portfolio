@@ -13,31 +13,31 @@ import toast, { Toaster } from 'react-hot-toast';
 
 const Landing = () => {
 
-   const [name, setName] = useState('')
-   const [email, setEmail] = useState('')
-   const [message, setMessage] = useState('')
-    
- 
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+
+
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        let post = {name: name, email: email, message: message};
+        let post = { name: name, email: email, message: message };
         try {
-            if(name == "" || email == "" || message == "") {
+            if (name == "" || email == "" || message == "") {
                 toast.error("Please fill out all fields")
             } else {
-               await axios.post("/api/contact", post);
-            toast.success("Message Sent!") 
-            setName('')
-            setEmail('')
-            setMessage('')
+                await axios.post("/api/contact", post);
+                toast.success("Message Sent!")
+                setName('')
+                setEmail('')
+                setMessage('')
             }
-            
-        } catch (error){
-        console.log(error)
-       }
-       
-   
+
+        } catch (error) {
+            console.log(error)
+        }
+
+
     }
     return (
         <>
@@ -48,31 +48,31 @@ const Landing = () => {
                     <h2>Full Stack Web Developer</h2>
                 </div>
                 <div className="socials">
-                    
+
                     <div className="social-container">
-                      <a href="https://github.com/Austin-T-Johnson" target="_blank" rel="noreferrer"><FontAwesomeIcon className="social-icon" icon={faSquareGithub} /></a>
+                        <a href="https://github.com/Austin-T-Johnson" target="_blank" rel="noreferrer"><FontAwesomeIcon className="social-icon" icon={faSquareGithub} /></a>
                         <span>GitHub</span>
                     </div>
                     <div className="social-container">
                         <a href="https://www.linkedin.com/in/austin-t-johnson/" target="_blank" rel="noreferrer"><FontAwesomeIcon className="social-icon" icon={faLinkedin} /></a>
-                         <span>LinkedIn</span>
+                        <span>LinkedIn</span>
                     </div>
                     <div className="social-container">
-                    <a href= {resume} target="_blank" rel="noreferrer"><FontAwesomeIcon className="social-icon" icon={faFilePdf} /></a>
-                    <span>Resume</span>
+                        <a href={resume} target="_blank" rel="noreferrer"><FontAwesomeIcon className="social-icon" icon={faFilePdf} /></a>
+                        <span>Resume</span>
                     </div>
                 </div>
             </div>
             <div className="separator-left"></div>
-                <div className="separator-angle"></div>
-                <div className="separator-right"></div>
-                
-            
+            <div className="separator-angle"></div>
+            <div className="separator-right"></div>
+
+
 
             <div className="about-section-container">
                 <div className="about-text">
-                  <h1 className="about-h1">
-                    <span>About Me</span>
+                    <h1 className="about-h1">
+                        <span>About Me</span>
                     </h1>
                     <br></br><br></br>
                     <span>
@@ -83,6 +83,11 @@ const Landing = () => {
                     <img src={aj} className="aj" alt="austin johnson"></img>
                 </div>
             </div>
+
+            <div className="separator-left-2"></div>
+            <div className="separator-angle-2"></div>
+            <div className="separator-right-2"></div>
+
             <h1 className="my-portfolio">My Portfolio</h1>
             <div className="portfolio-section-container">
                 {projects.map((proj) => {
@@ -94,7 +99,14 @@ const Landing = () => {
                     )
                 })}
             </div>
+            <div className="repeater-wrapper"></div>
             <h1 className="skills-h1">Skills</h1>
+            <div className="boot-container">
+               <p className="skills-dialog"> >> BOOT DIALOGUE: AVAILABLE SKILLS</p> 
+               <p className="skills-bracket">[=&nbsp;=&nbsp;=]</p>
+            </div>
+            
+            
             <div className="skills-container">
                 {skills.map((skill) => {
                     return (
@@ -121,7 +133,7 @@ const Landing = () => {
                 <form className="contact-form">
                     <div className="input-div">
                         <label className="label">Name</label>
-                        <input value={name}  onChange={(e) => setName(e.target.value)} className="input-input" type="text" />
+                        <input value={name} onChange={(e) => setName(e.target.value)} className="input-input" type="text" />
                     </div>
 
                     <div className="input-div">
