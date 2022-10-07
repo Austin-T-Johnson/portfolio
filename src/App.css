@@ -32,7 +32,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
     line-height: 1;
-    background-image: url(../public/assets/fuzzy.png);
+    background-image: url(../public/assets/fuzzy3.webp);
     background-size: contain;
 }
 
@@ -56,7 +56,7 @@ table {
 }
 
 .header-container {
-    background-image: url('../public/assets/grid2.png');
+    background-image: url('../public/assets/grid3.webp');
     background-size: cover;
     height: 600px;
     width: 100%;
@@ -285,8 +285,8 @@ strong {
 }
 
 .aj {
-    height: 600px;
-    width: 600px;
+    height: 500px;
+    width: 500px;
 }
 
 .repeater-wrapper {
