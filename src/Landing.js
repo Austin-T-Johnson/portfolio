@@ -57,15 +57,15 @@ const Landing = () => {
 
                     <div className="social-container">
                         <a href="https://github.com/Austin-T-Johnson" target="_blank" rel="noreferrer"><FontAwesomeIcon className="social-icon" icon={faSquareGithub} /></a>
-                        <span>GitHub</span>
+                        <span className="social-txt">GitHub</span>
                     </div>
                     <div className="social-container">
                         <a href="https://www.linkedin.com/in/austin-t-johnson/" target="_blank" rel="noreferrer"><FontAwesomeIcon className="social-icon" icon={faLinkedin} /></a>
-                        <span>LinkedIn</span>
+                        <span className="social-txt">LinkedIn</span>
                     </div>
                     <div className="social-container">
                         <a href={resume} target="_blank" rel="noreferrer"><FontAwesomeIcon className="social-icon" icon={faFilePdf} /></a>
-                        <span>Resume</span>
+                        <span className="social-txt">Resume</span>
                     </div>
                 </div>
             </div>
@@ -87,7 +87,7 @@ const Landing = () => {
                     </h1>
                     <br></br><br></br>
                     <span className="about-txt">
-                        I grew up loving music and art. I have a passion for design, which drew me to web development. Creating with code and laying out a good looking page is what I love to do and strive for in every page I create. I have worked on projects ranging from an <strong>Asylum Status Tracker</strong> for a non-profit, to <strong>Profession Business Sites</strong> for various companies, even a few just for fun projects such as a <strong>Crypto Tracker, </strong><strong>Translator App, </strong> and <strong>Weather App</strong>
+                        I grew up loving music and art. I have a passion for design, which drew me to web development. Creating with code and laying out a good looking page is what I love to do and strive for in every page I create. I have worked on projects ranging from a (not yet deployed) <strong>Asylum Status Tracker</strong> for a non-profit, to <strong>Profession Business Sites</strong> for various companies, as well as some just for fun projects such as a <strong>Crypto Tracker, </strong><strong>Translator App, </strong> and <strong>Weather App</strong>
                     </span>
                 </div>
                 <div className="about-img">
@@ -142,7 +142,7 @@ const Landing = () => {
                     <h2 className="get-in-touch">Get In Touch</h2>
                 </div>
 
-                <span>I'd love to hear from you about a project or if you're simply just curious about something, I'm always available and happy to answer any questions!</span>
+                <span className="contact-text">I'd love to hear from you about a project or if you're simply just curious about something, I'm always available and happy to answer any questions!</span>
                 <form className="contact-form">
                     <div className="input-div">
                         <label className="label">Name</label>
