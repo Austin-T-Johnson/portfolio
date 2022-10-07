@@ -860,22 +860,35 @@ button:after {
 @media only screen and (min-width: 767px) and (max-width: 768px) {
     .header-container {
         height: 250px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .header-text-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 200px;
+        text-align: center;
     }
 
     .header-img {
         height: 250px;
+        display: block;
     }
 
     .header-text-container h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .header-text-container h2 {
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
 
     .socials {
-        bottom: 10%;
+        bottom: 5%;
+        gap: 20px;
     }
 
     .social-icon {
@@ -887,37 +900,40 @@ button:after {
     }
 
     .launch {
-        top: 25%;
+        top: 29%;
+    }
+    .init {
+        font-size: 0.75rem;
     }
 
     .separator-left {
         left: 9.65%;
-        top: 26.83%;
+        top: 32.1%;
     }
 
     .separator-angle {
         left: 49.2%;
-        top: 26.3%;
+        top: 31.6%;
     }
 
     .separator-right {
         right: 9.2%;
-        top: 25.8%;
+        top: 31.2%;
     }
 
     .separator-left-2 {
         left: 9.65%;
-        top: 64.8%;
+        top: 64.6%;
     }
 
     .separator-angle-2 {
         left: 49.2%;
-        top: 65.2%;
+        top: 65.1%;
     }
 
     .separator-right-2 {
         right: 9.2%;
-        top: 65.7%;
+        top: 65.6%;
     }
 
     .aj {
