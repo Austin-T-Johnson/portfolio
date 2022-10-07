@@ -6,6 +6,12 @@ module.exports = function(app) {
     createProxyMiddleware({
       target: 'https://austin-johnson-portfolio.vercel.app/',
       changeOrigin: true,
+      pathRewrite: {
+        '^/api': '/',
+      },
+      prependPath: true,
     })
   );
 };
+
+
