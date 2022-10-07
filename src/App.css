@@ -1131,6 +1131,7 @@ button:after {
        display: flex;
        justify-content: center;
         margin: 100px;
+        padding-top: 10%;
     }
 
     .proj-container {
