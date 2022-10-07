@@ -38,6 +38,7 @@ const Landing = () => {
         }
     }
 
+   
 
     return (
         <>
@@ -97,10 +98,10 @@ const Landing = () => {
             <div className="portfolio-section-container">
                 {projects.map((proj) => {
                     return (
-                       <a href={proj.link} target="_blank" rel="noreferrer"><div className="proj-container" key={proj.id}>
+                        <a href={proj.link} target="_blank" rel="noreferrer"><div className="proj-container" key={proj.id}>
                             <div className="proj-img"><img src={proj.img} alt="project images"></img></div>
                             <div className="proj-txt"><span>{proj.txt}</span></div>
-                        </div></a> 
+                        </div></a>
                     )
                 })}
             </div>
@@ -116,13 +117,15 @@ const Landing = () => {
                 {skills.map((skill) => {
                     return (
                         <div className="skills-inner-container">
-                            <div className="skill-text-div">
-                                <h3 >{skill.name}</h3>
-                                <span>{skill.txt}</span>
-                            </div>
-                            <div className="skill-img-div">
+
+                            <div className="skill-img-div" >
+                                <div className="skill-text-div" >
+                                    <h3 >{skill.name}</h3>
+                                    <span>{skill.txt}</span>
+                                </div>
                                 <img className="skill-img" src={skill.img} alt="skill images"></img>
                             </div>
+
                         </div>
 
                     )

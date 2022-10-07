@@ -351,6 +351,12 @@ strong {
     width: 100%;
     justify-content: center;
 }
+.skill{
+    display: none;
+}
+.skills-inner-container:hover + .skill-text-div {
+    display: block;
+}
 
 .skills-dialog {
     color:rgb(229, 225, 230);
@@ -398,7 +404,7 @@ strong {
     flex-wrap: wrap;
     width: 300px;
     justify-content: center;
-
+    
 }
 
 .skill-text-div {
@@ -411,7 +417,13 @@ strong {
     width: 300px;
     border-radius: 1%;
     border: 1px solid rgb(229, 225, 230);
-    display: none;
+    transition: all .5s ease;
+    opacity: 0;
+   position: absolute;
+   top:-100%;
+   left:50%;
+   transform: translateX(-50%);
+   box-shadow: 2px 2px 10px -5px #00000050;
 }
 
 .skill-text-div h3 {
@@ -432,6 +444,10 @@ strong {
     width: 100px;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+}
+.skill-img-div:hover .skill-text-div {
+    opacity: 1;
 }
 
 .skill-img {
@@ -443,12 +459,6 @@ strong {
 .skill-img:hover {
     transform: scale(1.2);
 }
-
-.skill-img-div:hover + .skill-text-div {
-    display: block;
-}
-
-
 
 .get-in-touch {
     color: rgb(229, 225, 230);

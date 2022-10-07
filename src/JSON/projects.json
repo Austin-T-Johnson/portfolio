@@ -25,6 +25,7 @@
      {
         "img": "assets/weather.png",
         "txt": "Weather App",
-        "id": 5
+        "id": 5,
+        "link": "https://austin-weather-app.vercel.app/"
     }
 ]
