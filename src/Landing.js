@@ -22,10 +22,14 @@ const Landing = () => {
     const onSubmit = async (e) => {
         e.preventDefault();
         let post = { name: name, email: email, message: message };
+        let regEx = /[a-zA-Z0-9._%+-]+@[a-z0-9-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
         try {
-            if (name == "" || email == "" || message == "") {
+            if (name == "" || email == "" || message == "" ) {
                 toast.error("Please fill out all fields")
-            } else {
+            } else if (!regEx.test(email)) {
+                toast.error("Please enter a valid email address")
+            }
+            else {
                 await axios.post("/api/contact", post);
                 toast.success("Message Sent!")
                 setName('')
@@ -38,6 +42,7 @@ const Landing = () => {
         }
     }
 
+   
    
 
     return (

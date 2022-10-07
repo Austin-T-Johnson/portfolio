@@ -20,7 +20,7 @@
     {
         "id": 4,
         "img": "assets/node.png",
-        "txt":"I know the ins and outs of the node as a framework and can create a node application from scratch quickly.",
+        "txt":"I know the ins and outs of node as a framework and can create a node application from scratch quickly.",
         "name": "Node.js"
     },
     {
