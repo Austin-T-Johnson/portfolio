@@ -55,6 +55,18 @@ table {
     border-spacing: 0;
 }
 
+@font-face {
+    font-family: "Venus";
+    src: local("VenusRising"),
+    url("./fonts/venus-rising.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Jet";
+    src: local("JetBrainsMono"),
+    url("./fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+}
+
 .header-container {
     background-image: url('../public/assets/grid3.webp');
     background-size: cover;
@@ -84,7 +96,7 @@ table {
 }
 
 .header-text-container h1 {
-    font-family: 'Venus Rising';
+    font-family: 'Venus';
     font-size: 3rem;
     color: rgb(229, 225, 230);
     transform: scale(0.94);
@@ -93,7 +105,7 @@ table {
 }
 
 .header-text-container h2 {
-    font-family: 'JetBrains Mono';
+    font-family: 'Jet';
     font-size: 2rem;
     color: rgb(229, 225, 230);
     animation: glow 1s ease-in-out infinite alternate;
@@ -123,7 +135,7 @@ table {
 
 .social-container {
     color: rgb(229, 225, 230);
-    font-family: 'JetBrains Mono';
+    font-family: 'Jet';
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -147,7 +159,7 @@ table {
     line-height: 24px;
     text-shadow: rgba(255, 215, 77, 0.6) -1px -1px 6px, rgba(124, 127, 255, 0.6) 1px 1px 6px;
     overflow-wrap: break-word;
-    font-family: "JetBrains Mono", monospace;
+    font-family: "Jet", monospace;
     font-variant-ligatures: none;
     margin: 0px;
     animation: blink 1s linear infinite;
@@ -163,7 +175,7 @@ p {
     line-height: 24px;
     text-shadow: rgba(255, 215, 77, 0.6) -1px -1px 6px, rgba(124, 127, 255, 0.6) 1px 1px 6px;
     overflow-wrap: break-word;
-    font-family: "JetBrains Mono", monospace;
+    font-family: "Jet", monospace;
     font-variant-ligatures: none;
     margin: 0px;
 
@@ -259,7 +271,7 @@ p {
     color: rgb(229, 225, 230);
     ;
     transform: translate(-50%, -50%);
-    font-family: 'Venus Rising';
+    font-family: 'Venus';
 }
 
 .about-h1 span {
@@ -273,7 +285,7 @@ p {
 
 .about-txt {
     font-size: 1.3rem;
-    font-family: 'JetBrains Mono';
+    font-family: 'Jet';
     color: rgb(229, 225, 230);
     line-height: 3.5rem;
 }
@@ -308,7 +320,7 @@ strong {
 }
 
 .my-portfolio {
-    font-family: 'Venus Rising';
+    font-family: 'Venus';
     font-size: 3rem;
     color: rgb(229, 225, 230);
     text-align: center;
@@ -351,7 +363,7 @@ strong {
 }
 
 .skills-h1 {
-    font-family: 'Venus Rising';
+    font-family: 'Venus';
     font-size: 3rem;
     color: rgb(229, 225, 230);
     text-align: center;
@@ -383,7 +395,7 @@ strong {
     line-height: 24px;
     text-shadow: rgba(255, 215, 77, 0.6) -1px -1px 6px, rgba(124, 127, 255, 0.6) 1px 1px 6px;
     overflow-wrap: break-word;
-    font-family: "JetBrains Mono", monospace;
+    font-family: "Jet", monospace;
     font-variant-ligatures: none;
     margin: 0px;
 }
@@ -398,7 +410,7 @@ strong {
     line-height: 24px;
     text-shadow: rgba(255, 215, 77, 0.6) -1px -1px 6px, rgba(124, 127, 255, 0.6) 1px 1px 6px;
     overflow-wrap: break-word;
-    font-family: "JetBrains Mono", monospace;
+    font-family: "Jet", monospace;
     font-variant-ligatures: none;
     margin: 0px;
     animation: blink 1s linear infinite;
@@ -447,12 +459,12 @@ strong {
     ;
     animation: glow 1s ease-in-out infinite alternate;
     font-size: 1.1rem;
-    font-family: 'Venus Rising';
+    font-family: 'Venus';
 }
 
 .skill-text-div span {
     color: rgb(229, 225, 230);
-    font-family: 'JetBrains Mono';
+    font-family: 'Jet';
     font-size: 0.85rem;
 }
 
@@ -481,7 +493,7 @@ strong {
 .get-in-touch {
     color: rgb(229, 225, 230);
     font-size: 3rem;
-    font-family: 'Venus Rising';
+    font-family: 'Venus';
 }
 
 .form {
@@ -501,7 +513,7 @@ strong {
 .contact-text {
     color: rgb(229, 225, 230);
     font-size: 1.2rem;
-    font-family: 'JetBrains Mono';
+    font-family: 'Jet';
     width: 100%;
     max-width: 1200px;
     line-height: 3rem;
