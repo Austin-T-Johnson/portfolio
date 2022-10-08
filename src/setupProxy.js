@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: process.env.PORT,
+      target: 'https://austin-johnson-portfolio.vercel.app',
       changeOrigin: true,
     })
   );
