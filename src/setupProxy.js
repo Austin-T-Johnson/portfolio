@@ -4,14 +4,9 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'https://austin-johnson-portfolio.vercel.app/',
+      target: process.env.PORT,
       changeOrigin: true,
-      pathRewrite: {
-        '^/api': '/',
-      },
-      prependPath: true,
     })
   );
 };
-
 
