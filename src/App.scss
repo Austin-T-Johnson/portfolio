@@ -1,10 +1,8 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import './assets/css/scss.scss';
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -93,6 +91,7 @@ table {
     transform: translate(-50%, -50%);
     z-index: 1;
     width: 100%;
+    flex-wrap:wrap;
 }
 
 .header-text-container h1 {
@@ -126,6 +125,9 @@ table {
     font-size: 3rem;
     cursor: pointer;
     transition: transform .5s ease;
+    @include media-query($small) {
+        font-size: 2rem;
+    }
 }
 
 .social-icon:hover {
@@ -145,7 +147,7 @@ table {
     display: flex;
     gap: 10px;
     position: absolute;
-    top: 65%;
+    transform: translateY(-16px);
     left: 10%;
 }
 
@@ -163,6 +165,9 @@ table {
     font-variant-ligatures: none;
     margin: 0px;
     animation: blink 1s linear infinite;
+    @include media-query($small){
+        font-size: 12px;
+    }
 }
 
 p {
@@ -181,15 +186,29 @@ p {
 
 }
 
+.separator-container {
+    position: relative;
+}
+
 .separator-left {
     display: flex;
     gap: 4px;
     height: 4px;
     left: 9.65%;
-    bottom: 30.83%;
+    top: 8px;
     position: absolute;
     width: 40%;
     background-color: rgb(229, 225, 230);
+    @include media-query($small) {
+        width: 48%;
+        left: 9px;
+        top: 8px;
+    }
+    @include media-query($medium-small) {
+        width: 48%;
+        left: 22px;
+        top: 18px;
+    }
 }
 
 .separator-angle {
@@ -199,7 +218,12 @@ p {
     transform: rotate(-45deg);
     position: absolute;
     left: 49.3%;
-    bottom: 32.1%;
+    // bottom: 32.1%;
+    top:-5px;
+    @include media-query($small) {
+        width: 5%;
+        top:0;
+    }
 }
 
 .separator-right {
@@ -207,53 +231,29 @@ p {
     gap: 4px;
     height: 4px;
     right: 9.1%;
-    bottom: 33.4%;
+    top: -18px;
     position: absolute;
     width: 40%;
     background-color: rgb(229, 225, 230);
+    @include media-query($small) {
+        width: 45%;
+        height:4px;
+        right:7px;
+        top:-7px;
+        
+    }
 }
 
-.separator-left-2 {
-    display: flex;
-    gap: 4px;
-    height: 4px;
-    left: 9.65%;
-    bottom: -46.8%;
-    position: absolute;
-    width: 40%;
-    background-color: rgb(229, 225, 230);
-}
 
-.separator-angle-2 {
-    background-color: rgb(229, 225, 230);
-    width: 2%;
-    height: 4px;
-    transform: rotate(45deg);
-    position: absolute;
-    left: 49.3%;
-    bottom: -48.2%;
-}
-
-.separator-right-2 {
-    display: flex;
-    gap: 4px;
-    height: 4px;
-    right: 9.1%;
-    bottom: -49.4%;
-    position: absolute;
-    width: 40%;
-    background-color: rgb(229, 225, 230);
-}
 
 .about-section-container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: 700px;
+    padding: 55px 0px;
     color: rgb(229, 225, 230);
-    ;
-    padding-top: 100px;
+    flex-wrap: wrap;
 }
 
 .about-text-container {
@@ -288,6 +288,10 @@ p {
     font-family: 'Jet';
     color: rgb(229, 225, 230);
     line-height: 3.5rem;
+    @include media-query($small){
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
 }
 
 
@@ -299,6 +303,10 @@ strong {
 .aj {
     height: 500px;
     width: 500px;
+    @include media-query($small){
+        height: 250px;
+        width: 250px;
+    }
 }
 
 .repeater-wrapper {
@@ -313,9 +321,9 @@ strong {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    gap: 100px;
     align-items: center;
     width: 100%;
-    height: 700px;
     color: rgb(229, 225, 230);
 }
 
@@ -329,8 +337,6 @@ strong {
 }
 
 .proj-container {
-    height: 250px;
-    width: 500px;
     display: flex;
     overflow: hidden;
     align-items: center;
@@ -338,29 +344,18 @@ strong {
     flex-wrap: wrap;
     transition: transform .5s ease;
     cursor: pointer;
+    @include media-query($small){
+        flex-basis: 100%;
+        width: 100%;
+        height: unset;
+    }
 }
 
 .proj-container:hover {
     transform: scale(1.1);
 }
 
-.proj-txt {
-    position: relative;
-    width: 40vh;
-    height: 39vh;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: rgb(229, 225, 230);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-    opacity: 0;
-    transition: opacity 0.25s;
-    font-size: 2.5rem;
-}
+
 
 .skills-h1 {
     font-family: 'Venus';
@@ -419,12 +414,13 @@ strong {
 
 .skills-container {
     width: 100%;
-    height: 600px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 120px 0px;
+    gap: 100px 0px;
+  
 }
 
 .skills-inner-container {
@@ -502,12 +498,17 @@ strong {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    padding: 50px 0px;
     width: 100%;
     margin: 0 auto;
     text-align: center;
     background-image: url('../public/assets/grid3.webp');
     background-size: cover;
+}
+
+.contact-text-container {
+    display:flex;
+    flex-wrap: wrap;
 }
 
 .contact-text {
@@ -527,6 +528,7 @@ strong {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .input-div {
@@ -544,7 +546,6 @@ strong {
     outline: 0;
     font-size: 1rem;
     color: rgb(229, 225, 230);
-    ;
     background: transparent;
     transition: border-color 0.2s;
     padding-top: 15px;
@@ -567,8 +568,10 @@ strong {
     transition: 0.2s;
     font-size: 2rem;
     color: rgb(229, 225, 230);
-    ;
     pointer-events: none;
+    @include media-query($small) {
+        font-size:1rem;
+    }
 }
 
 .label:focus {
@@ -680,7 +683,7 @@ button:after {
     }
 }
 
-@media only screen and (max-width: 1920px) {
+/* @media only screen and (max-width: 1920px) {
     .separator-left-2 {
         display: flex;
         gap: 4px;
@@ -712,9 +715,9 @@ button:after {
         width: 40%;
         background-color: rgb(229, 225, 230);
     }
-}
+} */
 
-@media only screen and (min-width: 1023px) and (max-width: 1024px) {
+/* @media only screen and (min-width: 1023px) and (max-width: 1024px) {
     .header-container {
         height: 400px;
     }
@@ -744,7 +747,7 @@ button:after {
     }
 
     .launch {
-        top: 29%;
+        transform: translateY(-19px);
     }
 
     .separator-left {
@@ -1226,7 +1229,7 @@ button:after {
     }
 }
 
-/* @media only screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
     .header-container {
         height: 250px;
         display: flex;
@@ -1409,9 +1412,9 @@ button:after {
     .contact-form {
         width: 100%;
     }
-} */
+}
 
-/* @media only screen and (device-width: 428px) and (device-height: 720px) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (device-width: 428px) and (device-height: 720px) and (-webkit-device-pixel-ratio: 3) {
     .header-container {
         height: 250px;
         display: flex;
@@ -1594,7 +1597,7 @@ button:after {
     .contact-form {
         width: 100%;
     }
-} */
+}
 
 @media only screen and (min-width: 413px) and (max-width: 414px) {
     .header-container {
@@ -2158,4 +2161,4 @@ button:after {
     .contact-form {
         width: 100%;
     }
-}
+} */

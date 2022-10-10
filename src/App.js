@@ -1,5 +1,5 @@
 import Landing from './Landing';
-import './App.css';
+import './App.scss';
 import './fonts/JetBrainsMono-VariableFont_wght.ttf';
 import './fonts/venus-rising.ttf';
 

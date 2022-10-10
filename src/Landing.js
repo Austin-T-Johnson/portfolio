@@ -24,7 +24,7 @@ const Landing = () => {
         let post = { name: name, email: email, message: message };
         let regEx = /[a-zA-Z0-9._%+-]+@[a-z0-9-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
         try {
-            if (name == "" || email == "" || message == "" ) {
+            if (name == "" || email == "" || message == "") {
                 toast.error("Please fill out all fields")
             } else if (!regEx.test(email)) {
                 toast.error("Please enter a valid email address")
@@ -42,8 +42,8 @@ const Landing = () => {
         }
     }
 
-   
-   
+
+
 
     return (
         <>
@@ -69,14 +69,16 @@ const Landing = () => {
                     </div>
                 </div>
             </div>
-            <div className="launch">
-                <p>>></p>
-                <p className="init"> LAUNCH INITIATED</p>
+            <div className="separator-container">
+                <div className="launch">
+                    <p>>></p>
+                    <p className="init"> LAUNCH INITIATED</p>
+                </div>
+                <div className="separator-left"></div>
+                <div className="separator-angle"></div>
+                <div className="separator-right"></div>
             </div>
 
-            <div className="separator-left"></div>
-            <div className="separator-angle"></div>
-            <div className="separator-right"></div>
 
 
 
@@ -95,9 +97,11 @@ const Landing = () => {
                 </div>
             </div>
 
-            <div className="separator-left-2"></div>
-            <div className="separator-angle-2"></div>
-            <div className="separator-right-2"></div>
+            <div className="separator-container">
+                <div className="separator-left"></div>
+                <div className="separator-angle"></div>
+                <div className="separator-right"></div>
+            </div>
 
             <h1 className="my-portfolio">My Portfolio</h1>
             <div className="portfolio-section-container">
@@ -105,7 +109,7 @@ const Landing = () => {
                     return (
                         <a href={proj.link} target="_blank" rel="noreferrer"><div className="proj-container" key={proj.id}>
                             <div className="proj-img"><img src={proj.img} alt="project images"></img></div>
-                            <div className="proj-txt"><span>{proj.txt}</span></div>
+                            
                         </div></a>
                     )
                 })}
@@ -141,8 +145,9 @@ const Landing = () => {
                 <div className="get-in-touch-div">
                     <h2 className="get-in-touch">Get In Touch</h2>
                 </div>
-
+                <div className="contact-text-container">
                 <span className="contact-text">I'd love to hear from you about a project or if you're simply just curious about something, I'm always available and happy to answer any questions!</span>
+                </div>
                 <form className="contact-form">
                     <div className="input-div">
                         <label className="label">Name</label>
