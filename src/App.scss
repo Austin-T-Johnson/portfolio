@@ -73,6 +73,7 @@ table {
     text-align: center;
 }
 .header-container::before {
+    content: "";
     position: absolute;
     margin: 0px auto;
     left: 0px;
@@ -83,9 +84,11 @@ table {
     -webkit-mask-image: radial-gradient(70% 80% at 50% 50%, black 40%, transparent 70%);
     width: 100%;
     height:120%;
-  
 }
-.header-container::after {
+.austin-code-container {
+    position: relative;
+}
+.austin-code-container::before {
     animation: animate infinite 1s;
     content: "";
     top: 0px;
@@ -93,7 +96,7 @@ table {
     color: rgb(229, 225, 230);
     font-size: 1rem;
     pointer-events: none;
-    position: fixed;
+    position: absolute;
     text-align: center;
     width: 100%;
     opacity: 0.3;

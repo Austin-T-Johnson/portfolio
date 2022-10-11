@@ -48,7 +48,7 @@ const Landing = () => {
     return (
         <>
             <div className="header-container">
-
+            <div className="austin-code-container"></div>
                 <div className="header-text-container">
                     <h1>Austin Johnson |</h1>
                     <h2>Full Stack Web Developer</h2>
@@ -68,6 +68,7 @@ const Landing = () => {
                         <span className="social-txt">Resume</span>
                     </div>
                 </div>
+                
             </div>
             <div className="separator-container">
                 <div className="launch">
