@@ -258,7 +258,6 @@ p {
 }
 
 
-
 .about-section-container {
     display: flex;
     justify-content: space-evenly;
@@ -314,12 +313,9 @@ strong {
 }
 
 .aj {
-    height: 500px;
-    width: 500px;
-    @include media-query($small){
-        height: 250px;
-        width: 250px;
-    }
+    height: 421px;
+    width: 326px;
+    -webkit-mask-image: radial-gradient(95% 65% at 50% 50%, black 55%, transparent 80%);
 }
 
 .repeater-wrapper {

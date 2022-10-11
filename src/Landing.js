@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import projects from './JSON/projects.json';
 import skills from './JSON/skills.json';
-import aj from './assets/aj-circle.png';
+import aj from './assets/aj-transparent.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
