@@ -93,7 +93,7 @@ table {
     content: "";
     top: 0px;
     left: 0px;
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
     font-size: 1rem;
     pointer-events: none;
     position: absolute;
@@ -134,7 +134,7 @@ table {
 .header-text-container h1 {
     font-family: 'Venus';
     font-size: 3rem;
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
     transform: scale(0.94);
     animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
     position: relative;
@@ -143,7 +143,7 @@ table {
 .header-text-container h2 {
     font-family: 'Jet';
     font-size: 2rem;
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
     animation: glow 2s ease-in-out infinite alternate;
 
 }
@@ -158,7 +158,7 @@ table {
 }
 
 .social-icon {
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
     font-size: 3rem;
     cursor: pointer;
     transition: transform .5s ease;
@@ -173,7 +173,7 @@ table {
 }
 
 .social-container {
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
     font-family: 'Jet';
     display: flex;
     flex-direction: column;
@@ -186,10 +186,14 @@ table {
     position: absolute;
     transform: translateY(-16px);
     left: 10%;
+    @include media-query($small){
+        left: 2%;
+        
+    }
 }
 
 .init {
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
     -webkit-font-smoothing: antialiased;
     text-transform: uppercase;
     scroll-behavior: smooth;
@@ -202,13 +206,11 @@ table {
     font-variant-ligatures: none;
     margin: 0px;
     animation: blink 1s linear infinite;
-    @include media-query($small){
-        font-size: 12px;
-    }
+   
 }
 
 p {
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
     -webkit-font-smoothing: antialiased;
     text-transform: uppercase;
     scroll-behavior: smooth;
@@ -226,61 +228,15 @@ p {
 .separator-container {
     position: relative;
 }
-
-.separator-left {
-    display: flex;
-    gap: 4px;
-    height: 4px;
-    left: 9.65%;
-    top: 8px;
+.border {
+    background-image: url('../public/assets/border-02.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:35px;
+    width: 100%;
     position: absolute;
-    width: 40%;
-    background-color: rgb(229, 225, 230);
-    @include media-query($small) {
-        width: 48%;
-        left: 9px;
-        top: 8px;
-    }
-    @include media-query($medium-small) {
-        width: 48%;
-        left: 22px;
-        top: 18px;
-    }
 }
-
-.separator-angle {
-    background-color: rgb(229, 225, 230);
-    width: 2%;
-    height: 4px;
-    transform: rotate(-45deg);
-    position: absolute;
-    left: 49.3%;
-    // bottom: 32.1%;
-    top:-5px;
-    @include media-query($small) {
-        width: 5%;
-        top:0;
-    }
-}
-
-.separator-right {
-    display: flex;
-    gap: 4px;
-    height: 4px;
-    right: 9.1%;
-    top: -18px;
-    position: absolute;
-    width: 40%;
-    background-color: rgb(229, 225, 230);
-    @include media-query($small) {
-        width: 45%;
-        height:4px;
-        right:7px;
-        top:-7px;
-        
-    }
-}
-
 
 .about-section-container {
     display: flex;
@@ -288,7 +244,7 @@ p {
     align-items: center;
     width: 100%;
     padding: 55px 0px;
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
     flex-wrap: wrap;
 }
 
@@ -304,7 +260,7 @@ p {
     transform: scale(1.94);
     animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
     font-size: 3rem;
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
     ;
     transform: translate(-50%, -50%);
     font-family: 'Venus';
@@ -322,7 +278,7 @@ p {
 .about-txt {
     font-size: 1.3rem;
     font-family: 'Jet';
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
     line-height: 3.5rem;
     @include media-query($small){
         font-size: 1rem;
@@ -357,13 +313,13 @@ strong {
     gap: 100px;
     align-items: center;
     width: 100%;
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
 }
 
 .my-portfolio {
     font-family: 'Venus';
     font-size: 3rem;
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
     text-align: center;
     margin: 200px 0;
     transition: transform 0.5s, opacity 0.5s;
@@ -395,7 +351,7 @@ strong {
 .skills-h1 {
     font-family: 'Venus';
     font-size: 3rem;
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
     text-align: center;
     margin: 90px 0;
 }
@@ -416,7 +372,7 @@ strong {
 }
 
 .skills-dialog {
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
     -webkit-font-smoothing: antialiased;
     text-transform: uppercase;
     scroll-behavior: smooth;
@@ -431,7 +387,7 @@ strong {
 }
 
 .skills-arrow {
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
     -webkit-font-smoothing: antialiased;
     text-transform: uppercase;
     scroll-behavior: smooth;
@@ -475,7 +431,7 @@ strong {
     height: 95px;
     width: 300px;
     border-radius: 1%;
-    border: 1px solid rgb(229, 225, 230);
+    border: 1px solid$austin-primary;
     transition: all .5s ease;
     opacity: 0;
     position: absolute;
@@ -486,7 +442,7 @@ strong {
 }
 
 .skill-text-div h3 {
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
     ;
     animation: glow 1s ease-in-out infinite alternate;
     font-size: 1.1rem;
@@ -494,7 +450,7 @@ strong {
 }
 
 .skill-text-div span {
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
     font-family: 'Jet';
     font-size: 0.85rem;
 }
@@ -522,7 +478,7 @@ strong {
 }
 
 .get-in-touch {
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
     font-size: 3rem;
     font-family: 'Venus';
 }
@@ -560,7 +516,7 @@ strong {
 }
 
 .contact-text {
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
     font-size: 1.2rem;
     font-family: 'Jet';
     width: 100%;
@@ -593,7 +549,7 @@ strong {
     border-bottom: 2px solid darkgray;
     outline: 0;
     font-size: 1rem;
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
     background: transparent;
     transition: border-color 0.2s;
     padding-top: 15px;
@@ -615,7 +571,7 @@ strong {
     display: block;
     transition: 0.2s;
     font-size: 2rem;
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
     pointer-events: none;
     @include media-query($small) {
         font-size:1rem;
@@ -648,7 +604,7 @@ strong {
 button {
     margin-top: 20px;
     font-size: 18px;
-    color: rgb(229, 225, 230);
+    color:$austin-primary;
     ;
     font-weight: 800;
     cursor: pointer;

@@ -51,6 +51,7 @@ $imdex-dark-grey-trans:#6c727c40;
 $imdex-neutral:#ECEFF3;
 $imdex-dark:#333B5A;
 $imdex-table-grey:#EDF2F9;
+$austin-primary:  rgb(229, 225, 230);
 
 //box-shadows
 $box-shadow1:0px 6px 13px -9px rgba(0, 0, 0, .5);
@@ -62,7 +63,6 @@ $padding-lg:24px;
 $padding-xl:32px;
 $width-site: 1200px;
 $grid-medium: 1024px;
-$grid-medium-small: 1024px;
 $grid-large: 990px;
 $grid-widescreen: 1400px;
 $grid-gutter: 30px;
@@ -73,7 +73,6 @@ $small: 'small';
 $medium: 'medium';
 $medium-down: 'medium-down';
 $medium-up: 'medium-up';
-$medium-small: 'medium-small';
 $large: 'large';
 $large-down: 'large-down';
 $large-up: 'large-up';
@@ -102,7 +101,6 @@ $grid-breakpoints: (
   $medium '(min-width: #{$grid-medium}) and (max-width: #{$grid-large - 1})',
   $medium-down '(max-width: #{$grid-large - 1})',
   $medium-up '(min-width: #{$grid-medium})',
-  $medium-small '(max-width: #{grid-medium-small})',
   $large '(min-width: #{$grid-large}) and (max-width: #{$grid-widescreen - 1})',
   $large-down '(max-width: #{$grid-widescreen - 1})',
   $large-up '(min-width: #{$grid-large})',

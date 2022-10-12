@@ -48,7 +48,7 @@ const Landing = () => {
     return (
         <>
             <div className="header-container">
-            <div className="austin-code-container"></div>
+                <div className="austin-code-container"></div>
                 <div className="header-text-container">
                     <h1>Austin Johnson |</h1>
                     <h2>Full Stack Web Developer</h2>
@@ -68,16 +68,14 @@ const Landing = () => {
                         <span className="social-txt">Resume</span>
                     </div>
                 </div>
-                
+
             </div>
             <div className="separator-container">
                 <div className="launch">
                     <p>>></p>
                     <p className="init"> LAUNCH INITIATED</p>
                 </div>
-                <div className="separator-left"></div>
-                <div className="separator-angle"></div>
-                <div className="separator-right"></div>
+                <div className="border"></div>
             </div>
 
 
@@ -99,9 +97,7 @@ const Landing = () => {
             </div>
 
             <div className="separator-container">
-                <div className="separator-left"></div>
-                <div className="separator-angle"></div>
-                <div className="separator-right"></div>
+                <div className="border"></div>
             </div>
 
             <h1 className="my-portfolio">My Portfolio</h1>
@@ -110,7 +106,7 @@ const Landing = () => {
                     return (
                         <a href={proj.link} target="_blank" rel="noreferrer"><div className="proj-container" key={proj.id}>
                             <div className="proj-img"><img src={proj.img} alt="project images"></img></div>
-                            
+
                         </div></a>
                     )
                 })}
@@ -147,7 +143,7 @@ const Landing = () => {
                     <h2 className="get-in-touch">Get In Touch</h2>
                 </div>
                 <div className="contact-text-container">
-                <span className="contact-text">I'd love to hear from you about a project or if you're simply just curious about something, I'm always available and happy to answer any questions!</span>
+                    <span className="contact-text">I'd love to hear from you about a project or if you're simply just curious about something, I'm always available and happy to answer any questions!</span>
                 </div>
                 <form className="contact-form">
                     <div className="input-div">
