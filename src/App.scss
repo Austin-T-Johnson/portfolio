@@ -377,6 +377,8 @@ strong {
     flex-wrap: wrap;
     transition: transform .5s ease;
     cursor: pointer;
+    filter: drop-shadow(0px 0px 15px rgba(124, 127, 255, 0.6));
+    animation: hue-rotate 3s linear infinite;
     @include media-query($small){
         flex-basis: 100%;
         width: 100%;
@@ -726,6 +728,16 @@ button:after {
 @keyframes typewriter {
     to {
         left: 100%;
+    }
+}
+
+@keyframes hue-rotate {
+    0% {
+        filter: drop-shadow(0px 0px 15px rgba(124, 127, 255, 0.6));
+    } 50% {
+        filter: drop-shadow(0px 0px 15px rgba(255, 215, 77, 0.6));
+    } 100% {
+        filter: drop-shadow(0px 0px 15px rgba(124, 127, 255, 0.6));
     }
 }
 
