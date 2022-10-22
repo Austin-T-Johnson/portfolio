@@ -88,7 +88,7 @@ const Landing = () => {
                     </h1>
                     <br></br><br></br>
                     <span className="about-txt">
-                        I grew up loving music and art. I have a passion for design, which drew me to web development. Creating with code and laying out a good looking page is what I love to do and strive for in every page I create. I have worked on projects ranging from a (not yet deployed) <strong>Asylum Status Tracker</strong> for a non-profit, to <strong>Professional Business Sites</strong> for various companies, as well as some just for fun projects such as a <strong>Crypto Tracker, </strong><strong>Translator App, </strong> and <strong>Weather App</strong>
+                        I grew up loving music and art. I have a passion for design, which drew me to web development. Creating with code and laying out a good looking page is what I love to do and strive for in every page I create. I have worked on projects ranging from a (not yet deployed) <strong>Asylum Status Tracker</strong> for a non-profit, to <strong>Professional Business Sites</strong> for various companies, as well as some just for fun projects such as a <strong>Crypto Tracker, </strong><strong>Fighting Game,</strong> <strong>Translator App, </strong> and <strong>Weather App</strong>
                     </span>
                 </div>
                 <div className="about-img">

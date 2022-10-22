@@ -28,5 +28,11 @@
         "txt": "Weather App",
         "id": 5,
         "link": "https://austin-weather-app.vercel.app/"
+    },
+    {
+        "img": "assets/game.png",
+        "txt": "Fighting Game",
+        "id": 6,
+        "link": "https://fightinggame.vercel.app/"
     }
 ]
