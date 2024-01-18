@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import projects from './JSON/projects.json';
 import skills from './JSON/skills.json';
@@ -8,7 +8,7 @@ import { faSquareGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import resume from '../src/pdf/resume.pdf';
 import toast, { Toaster } from 'react-hot-toast';
-
+import Spinner from './Spinner'
 
 
 const Landing = () => {
@@ -16,22 +16,29 @@ const Landing = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
+    const [loaded, setLoaded] = useState(false)
 
+    useEffect(() => {
 
+    }, [])
 
     const onSubmit = async (e) => {
         e.preventDefault();
+        setLoaded(true)
         let post = { name: name, email: email, message: message };
         let regEx = /[a-zA-Z0-9._%+-]+@[a-z0-9-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
         try {
             if (name == "" || email == "" || message == "") {
+                setLoaded(false)
                 toast.error("Please fill out all fields")
             } else if (!regEx.test(email)) {
+                setLoaded(false)
                 toast.error("Please enter a valid email address")
             }
             else {
                 await axios.post("/api/contact", post);
                 toast.success("Message Sent!")
+                setLoaded(false)
                 setName('')
                 setEmail('')
                 setMessage('')
@@ -41,7 +48,6 @@ const Landing = () => {
             console.log(error)
         }
     }
-
 
 
 
@@ -88,7 +94,7 @@ const Landing = () => {
                     </h1>
                     <br></br><br></br>
                     <span className="about-txt">
-                        I grew up loving music and art. I have a passion for design, which drew me to web development. Creating with code and laying out a good looking page is what I love to do and strive for in every page I create. I have worked on projects ranging from a (not yet deployed) <strong>Asylum Status Tracker</strong> for a non-profit, to <strong>Professional Business Sites</strong> for various companies, as well as some just for fun projects such as a <strong>Crypto Tracker, </strong><strong>Fighting Game,</strong> <strong>Translator App, </strong> and <strong>Weather App</strong>
+                        I grew up loving music and art. I have a passion for design, which drew me to web development. Creating with code and laying out a good looking page is what I love to do and strive for in every page I create. As a seasoned Web Developer I havent had much time to work on any new projects of my own, however my experience spans a diverse array ranging from an <strong>Asylum Status Tracker</strong> for a non-profit, <strong>Professional Business Sites</strong> for various companies, as well as some <i>just for fun</i> projects such as a <strong>Crypto Tracker,</strong> <strong>Fighting Game,</strong> and <strong>Weather App.</strong> Check out my portfolio below to see a few of them!
                     </span>
                 </div>
                 <div className="about-img">
@@ -102,9 +108,9 @@ const Landing = () => {
 
             <h1 className="my-portfolio">My Portfolio</h1>
             <div className="portfolio-section-container">
-                {projects.map((proj) => {
+                {projects.map((proj, idx) => {
                     return (
-                        <a href={proj.link} target="_blank" rel="noreferrer"><div className="proj-container" key={proj.id}>
+                        <a href={proj.link} target="_blank" rel="noreferrer"><div className="proj-container" key={idx}>
                             <div className="proj-img"><img src={proj.img} alt="project images"></img></div>
 
                         </div></a>
@@ -120,9 +126,9 @@ const Landing = () => {
 
 
             <div className="skills-container">
-                {skills.map((skill) => {
+                {skills.map((skill, idx) => {
                     return (
-                        <div className="skills-inner-container">
+                        <div className="skills-inner-container" key={idx}>
 
                             <div className="skill-img-div" >
                                 <div className="skill-text-div" >
@@ -162,9 +168,10 @@ const Landing = () => {
                     </div>
                 </form>
                 <div className="btn-content">
-                    <button onClick={onSubmit}>Submit</button>
-                    <Toaster />
+                    {loaded ? <Spinner className='p-7'/> : <button onClick={onSubmit}>Submit</button>}
+                    <Toaster  position="bottom-center"/>
                 </div>
+
             </section>
         </>
     )

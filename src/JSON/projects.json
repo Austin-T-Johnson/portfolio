@@ -9,19 +9,19 @@
         "img": "assets/adhype.png",
         "txt": "Adhype Visuals",
         "id": 2,
-        "link": "https://adhypevisuals.com/"
+        "link": "https://adhype-visuals.vercel.app/"
     },
     {
-        "img": "assets/translator.png",
-        "txt": "Translator App",
+        "img": "assets/headsuphair.png",
+        "txt": "Heads Up Hair",
         "id": 3,
-        "link": "https://translator.adhypevisuals.com/"
+        "link": "https://headsuphairdesignsps.com/"
     },
     {
         "img": "assets/asylum.png",
         "txt": "Asylum Office Status Tracker",
         "id": 4,
-        "link": "https://github.com/BloomTech-Labs/asylum-rg-fe"
+        "link": "https://asylum-rg-fe.vercel.app/"
     },
      {
         "img": "assets/weather3.png",

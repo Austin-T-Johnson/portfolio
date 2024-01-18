@@ -38,37 +38,37 @@
     {
         "id": 7,
         "img": "assets/css.png",
-        "txt":"I know css and many of its other frameworks like the back of my hand.",
+        "txt":"I love nothing more than laying out a visually stunning and responsive application.",
         "name": "CSS"
     },
     {
         "id": 8,
-        "img": "assets/digiocean.png",
-        "txt":"I use Digital Ocean to deploy all of my apps.",
-        "name": "Digital Ocean"
+        "img": "assets/tailwindcss.png",
+        "txt":"My absolute favorite css framework. I have become a master at styling applications using Tailwind.",
+        "name": "Tailwindcss"
     },
     {
         "id": 9,
+        "img": "assets/graphql.svg",
+        "txt":"Probably my favorite query language to use. I have extensive experience with graphQL queries, mutations, and subscriptions.",
+        "name": "GraphQL"
+    },
+    {
+        "id": 10,
         "img": "assets/photoshop.png",
         "txt":"I have used Photoshop for 10+ years and have mastered the program.",
         "name": "Photoshop"
     },
     {
-        "id": 10,
+        "id": 11,
         "img": "assets/illustrator.png",
         "txt":"Along with Photoshop I have used Illustrator for 10+ years and created branding and logos for many companies.",
         "name": "Illustrator"
     },
     {
-        "id": 11,
+        "id": 12,
         "img": "assets/after_effects.png",
         "txt":"I have extensive experience using After Effects, and have created motion graphics for major bands and music artists.",
         "name": "After Effects"
-    },
-    {
-        "id": 12,
-        "img": "assets/cinema.png",
-        "txt":"I have some 3d modeling experience and can create some awesome 3d renderings.",
-        "name": "Cinema 4d"
     }
-]
+ ]
