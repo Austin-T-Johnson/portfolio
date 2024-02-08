@@ -1,38 +1,38 @@
 [
-    {
-        "img": "assets/crypto.png",
-        "txt": "Crypto Sniper",
-        "id": 1,
-        "link": "https://crypto-sniper.vercel.app/"
-    },
-    {
-        "img": "assets/adhype.png",
-        "txt": "Adhype Visuals",
-        "id": 2,
-        "link": "https://adhype-visuals.vercel.app/"
-    },
-    {
-        "img": "assets/headsuphair.png",
-        "txt": "Heads Up Hair",
-        "id": 3,
-        "link": "https://headsuphairdesignsps.com/"
-    },
-    {
-        "img": "assets/asylum.png",
-        "txt": "Asylum Office Status Tracker",
-        "id": 4,
-        "link": "https://asylum-rg-fe.vercel.app/"
-    },
-     {
-        "img": "assets/weather3.png",
-        "txt": "Weather App",
-        "id": 5,
-        "link": "https://austin-weather-app.vercel.app/"
-    },
-    {
-        "img": "assets/game.png",
-        "txt": "Fighting Game",
-        "id": 6,
-        "link": "https://fightinggame.vercel.app/"
-    }
+  {
+    "img": "assets/crypto.png",
+    "txt": "Crypto Sniper",
+    "id": 1,
+    "link": "https://crypto-sniper.vercel.app/"
+  },
+  {
+    "img": "assets/adhypev2.png",
+    "txt": "Adhype Visuals",
+    "id": 2,
+    "link": "https://adhypevisualsv2.vercel.app/"
+  },
+  {
+    "img": "assets/headsuphair.png",
+    "txt": "Heads Up Hair",
+    "id": 3,
+    "link": "https://headsuphairdesignsps.com/"
+  },
+  {
+    "img": "assets/asylum.png",
+    "txt": "Asylum Office Status Tracker",
+    "id": 4,
+    "link": "https://asylum-rg-fe.vercel.app/"
+  },
+  {
+    "img": "assets/weather3.png",
+    "txt": "Weather App",
+    "id": 5,
+    "link": "https://austin-weather-app.vercel.app/"
+  },
+  {
+    "img": "assets/game.png",
+    "txt": "Fighting Game",
+    "id": 6,
+    "link": "https://fightinggame.vercel.app/"
+  }
 ]
